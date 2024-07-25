@@ -1,0 +1,74 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.header {
+	background-color: variables.$whiteColor;
+	padding: 20px 0;
+	position: sticky;
+	top: 0;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+	z-index: 10;
+
+	&-wrapper {
+		@include mixins.flex(space-between, center);
+	}
+
+	.logo-link {
+		@include mixins.flex(space-between, center);
+		.logo-img {
+			margin-right: 10px;
+		}
+
+		.logo-text {
+			font-size: 32px;
+			line-height: 44px;
+			font-weight: 700;
+			color: variables.$green;
+		}
+	}
+
+	.navbar-list {
+		@include mixins.flex(space-between, center);
+		list-style-type: none;
+
+		&__item:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		&__link {
+			color: variables.$purple;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	.actions {
+		@include mixins.flex(space-between, center);
+
+		.burger {
+			margin-left: 20px;
+		}
+	}
+
+	.btns {
+		@include mixins.flex(space-between, center);
+	}
+
+	.btn {
+		background-color: variables.$lightGray;
+	}
+
+	.btn:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	.btn-language {
+		color: variables.$green;
+		line-height: 24px;
+	}
+
+	.btn-success {
+		line-height: 24px;
+	}
+}

@@ -1,0 +1,40 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.socials {
+	background-color: variables.$purple;
+	padding: 16px 0;
+
+	&-wrapper {
+		@include mixins.flex(space-between, center);
+	}
+
+	&__description {
+		@include mixins.flex(space-between, center);
+		align-items: center;
+		color: variables.$whiteColor;
+
+		span {
+			margin-left: 8px;
+		}
+
+		.line {
+			width: 14px;
+			height: 2px;
+			background-color: variables.$whiteColor;
+		}
+	}
+
+	.social-links__list {
+		@include mixins.flex(space-between, center);
+		list-style-type: none;
+
+		&--item:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		&--link {
+			color: variables.$whiteColor;
+		}
+	}
+}

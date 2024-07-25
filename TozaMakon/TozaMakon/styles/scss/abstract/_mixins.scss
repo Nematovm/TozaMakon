@@ -1,0 +1,30 @@
+@mixin flex($justifyContent, $alignItems, $flex-direction: row) {
+	display: flex;
+	align-items: $alignItems;
+	justify-content: $justifyContent;
+	flex-direction: $flex-direction;
+}
+
+@mixin grid($repeat, $gap: 10px) {
+	display: grid;
+	grid-template-columns: repeat($repeat, 1fr);
+	gap: 10px;
+}
+
+@mixin media-tablet {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin media-mini-tablet {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media-mobile {
+	@media (max-width: 576px) {
+		@content;
+	}
+}

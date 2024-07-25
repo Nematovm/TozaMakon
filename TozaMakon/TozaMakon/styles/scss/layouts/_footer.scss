@@ -1,0 +1,26 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+@use '../components/ask-question';
+
+.footer {
+	background-color: variables.$lightGray;
+	padding: 60px 0;
+	text-align: center;
+
+	&-logo__image {
+		margin-bottom: 20px;
+	}
+
+	&-logo__text {
+		font-size: 32px;
+		line-height: 44px;
+		color: variables.$green;
+		margin-bottom: 5px;
+	}
+
+	&-logo__motto {
+		line-height: 24px;
+		font-weight: 500;
+		color: variables.$gray;
+	}
+}

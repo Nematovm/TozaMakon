@@ -1,0 +1,77 @@
+@use '../abstract/mixins';
+
+@include mixins.media-mobile {
+	.container {
+		padding: 0 15px;
+	}
+
+	.header {
+		.logo-link {
+			.logo-text {
+				font-size: 26px;
+				line-height: 38px;
+			}
+		}
+	}
+
+	.hero-infos {
+		@include mixins.flex(space-between, center, column-reverse);
+		text-align: center;
+
+		.hero-info__sub--title {
+			font-size: 18px;
+		}
+
+		.hero-info__title {
+			font-size: 30px;
+			line-height: 40px;
+		}
+
+		.hero-info__description {
+			margin: 0 auto 30px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+
+	.services {
+		&-info__sub--title {
+			font-size: 18px;
+			line-height: 32px;
+		}
+	}
+
+	.services-cards {
+		@include mixins.grid(1, 12px);
+	}
+
+	.ask-question {
+		&__sub--title {
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+		&__title {
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		&__description {
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.footer {
+		&-logo__text {
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		&-logo__motto {
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+}

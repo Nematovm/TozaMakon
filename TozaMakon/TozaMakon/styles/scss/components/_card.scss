@@ -1,0 +1,35 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.services-cards {
+	@include mixins.grid(4, 16px);
+
+	.services-card {
+		padding: 20px;
+		background-color: variables.$lightGray;
+		border-radius: 16px;
+	}
+
+	.services-card__img {
+		width: 100%;
+	}
+
+	.services-card__title {
+		margin: 20px 0;
+		color: variables.$purple;
+		font-size: 18px;
+	}
+
+	.services-card__description {
+		font-size: 14px;
+		font-weight: 500;
+		color: variables.$gray;
+		line-height: 22px;
+		margin-bottom: 20px;
+	}
+
+	.btn {
+		width: 100%;
+		text-align: center;
+	}
+}

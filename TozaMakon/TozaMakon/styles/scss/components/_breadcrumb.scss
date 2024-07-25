@@ -1,0 +1,11 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
+.breadcrumb {
+	@include mixins.flex(flex-start, center);
+	font-weight: 600;
+
+	&-link {
+		color: variables.$breadcrumb-color;
+	}
+}

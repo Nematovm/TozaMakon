@@ -1,0 +1,19 @@
+@use '../abstract/mixins';
+
+@include mixins.media-mini-tablet {
+	.services-cards {
+		@include mixins.grid(2, 12px);
+	}
+
+	.socials {
+		.socials__description {
+			display: none;
+		}
+	}
+
+	.header {
+		.btns {
+			display: none;
+		}
+	}
+}
